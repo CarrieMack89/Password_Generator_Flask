@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Password Generator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <h1> Simple Password Generator</h1>
+        <form method= "POST">
+            <label for "length">Password Length: </label>
+            <input type="number" name="length"
+            id="length" value="12" min="6"
+            max="50"><br><br>
+
+            <label><input type="checkbox"
+                name="use_upper"> Include Upper case letters</label><br>
+            <label><input type="checkbox"
+                name="use_lower"> Include Lower case letters</label><br>
+            <label><input type="checkbox"
+                name="use_digits"> Include numbers</label><br>
+            <label><input type="checkbox"
+                name="use_special"> Include special Characters</label><br>
+
+            <button type="submit"> Generate Password</button>
+            </form>
+
+            {% if password %}
+                <h2> Generated Password:</h2>
+                <p><strong>{{ password }} </strong></p>
+                <h3>Password Strength: {{ strength }} </h3>
+                {% endif %}
+
+       
+        
+        
+    </body>
+</html>
