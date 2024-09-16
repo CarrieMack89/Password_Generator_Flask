@@ -27,6 +27,9 @@ form {
     justify-content: space-between;
     padding: 5px;
     color: white;
+    border: solid white;
+    background-color: darkseagreen;
+    
 }
 
 label,
@@ -67,3 +70,4 @@ li {
     margin-bottom: 10px;
     color: white;
 }
+
